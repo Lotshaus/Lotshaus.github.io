@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #4CAF50;
+    transition: transform 0.3s ease-in-out; /* Animace při najetí myši */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Zvětšení při najetí myši */
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.links {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+.links a {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Mírné posunutí nahoru při najetí myši */
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* Další cool animace (volitelné) */
+/* Animace pro text */
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.profile-card p {
+    animation: slideInFromLeft 1s ease-out forwards;
+    opacity: 0; /* Skryje text na začátku */
+    /* Zpoždění pro každý odstavec */
+}
+.profile-card p:nth-child(3) { animation-delay: 0.5s; }
+.profile-card p:nth-child(4) { animation-delay: 0.7s; }
+.profile-card p:nth-child(5) { animation-delay: 0.9s; }
+.profile-card p:nth-child(6) { animation-delay: 1.1s; }
+
+
+/* Animace pro box (example) */
+.profile-card {
+    transition: all 0.5s ease-in-out;
+}
+.profile-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
